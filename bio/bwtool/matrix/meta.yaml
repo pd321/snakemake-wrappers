@@ -1,0 +1,10 @@
+name: bwtool matrix
+description:
+
+authors:
+  - pd321
+input:
+  - BED file (*.bed)
+  - bwfiles (*.bw)
+output:
+  - tab-separated matrix file
