@@ -1,0 +1,9 @@
+name: plotprofile
+description:
+
+authors:
+  - pd321
+input:
+  - bwtool matrix files (*.tsv)
+output:
+  - a profile plot (*.pdf)
