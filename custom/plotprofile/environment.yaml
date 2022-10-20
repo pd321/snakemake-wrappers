@@ -1,8 +1,9 @@
 channels:
   - conda-forge
   - bioconda
-  - nodefaults
+  - defaults
 dependencies:
+  - r-rcpp =1.0.9
   - r-purrr =0.3.5
   - r-ggplot2 =3.3.6
   - r-locfit =1.5_9.6
