@@ -50,7 +50,7 @@ plot_profile <- function(bwtool_out_files,
 
 
 bwtool_out_files <- snakemake@input[["bwtool_out_files"]]
-sample_names <- gsub(".*-", "", gsub("\\.gz", "", gsub(".*\\/", "", bwtool_out_files)))
+sample_names <- snakemake@input[["bwtool_out_files"]] %>% purrr::map(basename) %>% purrr::map(~gsub("\\..*", "", .x, perl = TRUE)) %>% unlist
 input_count <- sum(grepl("input", sample_names, ignore.case = TRUE))
 bwtool_start <- -1 * as.integer(snakemake@params[["bwtool_start_end"]])
 bwtool_end <- as.integer(snakemake@params[["bwtool_start_end"]])
