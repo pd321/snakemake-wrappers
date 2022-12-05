@@ -57,7 +57,7 @@ bwtool_end <- as.integer(snakemake@params[["bwtool_start_end"]])
 bwtool_window <- as.integer(snakemake@params[["bwtool_window"]])
 x_axis_break_interval <- as.integer(snakemake@params[["profile_x_axis_break"]])
 plot_title <- snakemake@params[["plot_title"]]
-plot_colours <- c(rep("grey", input_count), ggthemes::wsj_pal()(6))
+plot_colours <- ggthemes::wsj_pal()(6)
 
 profile_plot <- plot_profile(
   bwtool_out_files = bwtool_out_files,
