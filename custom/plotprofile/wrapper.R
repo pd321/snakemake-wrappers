@@ -55,7 +55,7 @@ input_count <- sum(grepl("input", sample_names, ignore.case = TRUE))
 bwtool_start <- -1 * as.integer(snakemake@params[["bwtool_start_end"]])
 bwtool_end <- as.integer(snakemake@params[["bwtool_start_end"]])
 bwtool_window <- as.integer(snakemake@params[["bwtool_window"]])
-x_axis_break_interval <- 2500
+x_axis_break_interval <- as.integer(snakemake@params[["profile_x_axis_break"]])
 plot_title <- snakemake@params[["plot_title"]]
 plot_colours <- c(rep("grey", input_count), ggthemes::wsj_pal()(6))
 
