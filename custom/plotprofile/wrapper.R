@@ -33,7 +33,7 @@ plot_profile <- function(bwtool_out_files,
   profilePlot <- ggplot(data = bw_signal_df_melt, mapping = aes(x = Position, y = Signal, colour = Sample)) +
     geom_line(size = 1) +
     geom_vline(xintercept = 0, colour = "grey", linetype = "dashed", size = 0.3) +
-    scale_colour_manual(values = plot_colours, name = "") +
+    # scale_colour_manual(values = plot_colours, name = "") +
     scale_x_continuous(breaks = seq(from = bwtool_start, to = bwtool_end, by = x_axis_break_interval)) +
     ggplot2::labs(x = "", y = "Normalized Signal", title = plot_title) +
     cowplot::theme_cowplot() +
